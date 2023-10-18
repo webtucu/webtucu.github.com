@@ -1,0 +1,672 @@
+/* Importación de la fuente de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  background-color: #080202;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.swiper-button-prev::after {
+  font-size: 25px;
+}
+
+.swiper-button-next::after {
+  font-size: 25px;
+}
+
+.swiper-button-next {
+  color: #DB241B;
+}
+
+.swiper-button-prev {
+  color: #DB241B;
+}
+
+/* Estilos para la paginación del carrusel */
+.swiper-pagination-bullet {
+  background-color: #D3D2D2;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #DB241B;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #DB241B;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  /* Otros estilos que desees agregar */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 10;
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+}
+
+.menu-1 {
+  margin-right: 200px;
+}
+
+.menu-2 {
+  margin-left: 200px;
+
+}
+
+
+/* Estilos para el logotipo */
+.logo-1 {
+  width: 0;
+}
+
+.logo-2 {
+  width: 150px;
+}
+
+.logo-3 {
+  width: 150px;
+  right: 150px;
+}
+
+/* Estilos para los íconos de redes sociales */
+.socials {
+  display: flex;
+}
+
+.social {
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #DB241B;
+  border-radius: 50%;
+}
+
+.social:hover {
+  background-color: #DB241B;
+}
+
+.social img {
+  margin: 8px 0 0 10px;
+}
+
+/* Estilos para los elementos de menú de navegación */
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 15px;
+  color: #FFFFFF;
+  display: block;
+}
+
+.menu .navbar ul li a:hover {
+  color: #DB241B;
+}
+
+/* Estilos para el menú de hamburguesa (oculto) */
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+/* Estilos para la sección de encabezado */
+.header-content {
+  margin-top: 200px;
+  padding-bottom: 50px;
+}
+
+/* Estilos para el carrusel de imágenes */
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider-txt {
+  flex: 85px;
+  margin-right: 50px;
+}
+
+.slider-txt h1 {
+  font-size: 70px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.slider-txt p {
+  font-size: 18px;
+  color: #a7a7a7;
+}
+
+/* Estilos para los botones del carrusel */
+.botones {
+  margin-top: 50px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 2px solid #DB241B;
+  color: #FFFFFF;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+.btn-1:hover {
+  border: 2px solid #DB241B;
+  background-color: #DB241B;
+}
+
+/* Estilos para las imágenes del carrusel */
+.slider-img {
+  width: 50%;
+}
+
+.slider-img img {
+  margin-right: 225px;
+  width: 550px;
+}
+
+/* Estilos para la sección de productos */
+.Products {
+  background-color: #0d0d0d;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0px;
+  justify-content: space-between;
+}
+
+/* Estilos para las pestañas de productos */
+.tabs label {
+  width: 15%;
+  order: 1;
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #A7A7A7;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background ease 0.2s;
+}
+
+/* Estilos para el contenido de las pestañas de productos */
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding-top: 25px;
+}
+
+/* Estilos para los radios de las pestañas (ocultos) */
+.tabinput[type="radio"] {
+  display: none;
+}
+
+/* Estilos para la pestaña activa y su contenido */
+.tabinput[type="radio"]:checked + label {
+  border-bottom: 2px solid #DB241B;
+  color: #FFFFFF;
+}
+
+.tabinput[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+/* Estilos para los productos individuales */
+.Product {
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  margin: 0 10px;
+}
+
+.Product-img {
+  width: 50%;
+  text-align: left;
+}
+
+.Product-img h4 {
+  display: inline-block;
+  padding: 5px 7px;
+  line-height: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.Product-img img {
+  width: 150px;
+  height: 120px;
+}
+
+.Product-txt {
+  width: 50%;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.Product-txt h4 {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.Product-txt p {
+  color: #a7a7a7;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.Product-txt span {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Estilos para la sección de información */
+.info {
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.info-img {
+  width: 50%;
+}
+
+.info-img img {
+  width: 500px;
+  height: 150px;
+}
+
+.info-txt {
+  width: 50%;
+}
+
+.info-txt h2 {
+  font-size: 75px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.info-txt p {
+  font-size: 18px;
+  color: #a7a7a7;
+  margin-bottom: 50px;
+}
+
+/* Estilos para el botón de información */
+.btn-2 {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #DB241B;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.btn-2:hover {
+  background-color: #DB241B;
+}
+
+/* Estilos para la sección de horario */
+.Horario {
+  padding: 100px 0px;
+  background-color: #0d0d0d;
+}
+
+.horario-info h2 {
+  font-size: 75px;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.horario-txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.txt {
+  color: #FFFFFF;
+}
+
+.txt h4 {
+  font-size: 18px;
+  color: #A7A7A7;
+  margin-bottom: 30px;
+}
+
+.txt p {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección del pie de página */
+.footer {
+  padding: 100px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links h4 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.links ul li a {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .menu-2 {
+    display: none;
+  }
+
+  .logo-1 {
+    width: 100px;
+  }
+
+  .logo-2 {
+    width: 0;
+  }
+
+  .menu label {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181818;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .header-content {
+    padding: 30px;
+    margin-top: 100px;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  .slider-txt {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .slider-txt h1 {
+    font-size: 50px;
+  }
+
+  .slider-txt p {
+    font-size: 16px;
+  }
+
+  .btn-1 {
+    padding: 10px 25px;
+    font-size: 16px; /* Añadido para que los botones sean del mismo tamaño en dispositivos móviles */
+  }
+
+  .slider-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider-img img {
+    margin-right: 0px;
+    width: 300px;
+  }
+
+  /* Añadido un espacio después de .swiper-pagination-fraction para corregir el error de sintaxis */
+  .swiper-horizonal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets, .swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -7px;
+  }
+
+  .tabs {
+    padding: 50px 30px;
+  }
+
+  .tabs label {
+    width: 33%;
+  }
+
+  .info {
+    padding: 30px;
+    flex-direction: column;
+  }
+
+  .info-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-img img {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 25px;
+  }
+
+  .info-txt {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-txt h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .info-txt p {
+    font-size: 16px;
+  }
+
+  /* Estilos para los íconos de redes sociales en dispositivos móviles */
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra los íconos verticalmente */
+  }
+
+  .social {
+    margin: 8px; /* Aumenta el margen para separar los íconos */
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DB241B;
+    border-radius: 50%;
+    overflow: hidden; /* Oculta el exceso del logo */
+  }
+
+  .social:hover {
+    background-color: #DB241B;
+  }
+
+  .social img {
+    width: 50%; /* Ajusta el tamaño del logo al 100% del círculo */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  /* Estilos para el pie de página en dispositivos móviles */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px; /* Ajustado para mayor espacio en dispositivos móviles */
+  }
+
+  .links {
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para la sección de horario en dispositivos móviles */
+  .Horario {
+    padding: 30px; /* Reduje el padding para obtener un mejor aspecto en dispositivos móviles */
+    text-align: center;
+  }
+
+  .horario-info h2 {
+    font-size: 40px; /* Reduje el tamaño de la fuente para que se vea mejor en dispositivos móviles */
+    margin-bottom: 15px;
+  }
+
+  .horario-txt {
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en dispositivos móviles */
+  }
+
+  .txt h4 {
+    font-size: 16px; /* Reduje el tamaño de la fuente para que se vea mejor en dispositivos móviles */
+    color: #A7A7A7;
+    margin-bottom: 20px; /* Aumenté el margen inferior para separar los elementos */
+  }
+
+  .txt p {
+    font-size: 16px; /* Reduje el tamaño de la fuente para que se vea mejor en dispositivos móviles */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px; /* Aumenté el margen inferior para separar los elementos */
+  }
+
+  .Products {
+    padding: 20px; /* Ajusta el espaciado según sea necesario */
+  }
+
+  /* Ajusta el ancho de las etiquetas de pestañas para adaptarse a la pantalla */
+  .tabs label {
+    width: auto; /* Permite que el ancho se ajuste automáticamente al contenido */
+    padding: 10px 20px; /* Ajusta el espaciado dentro de las etiquetas */
+    margin-bottom: 10px; /* Agrega margen inferior para separar las etiquetas */
+  }
+
+  /* Ajusta el ancho de los productos para adaptarse a la pantalla */
+  .swiper-slide .Product {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Establece un ancho máximo para evitar que los productos sean demasiado grandes */
+    margin: 0 auto; /* Centra los productos horizontalmente en la pantalla */
+  }
+
+  /* Ajusta el tamaño de las imágenes de productos */
+  .swiper-slide .Product .Product-img img {
+    width: 100%; /* Ajusta el ancho de las imágenes al ancho de su contenedor */
+    height: auto; /* Ajusta automáticamente la altura proporcionalmente */
+  }
+
+  /* Estilos para el texto de los productos */
+  .swiper-slide .Product .Product-txt {
+    text-align: center; /* Centra el texto */
+  }
+
+  /* Ajusta el tamaño de la fuente para el texto de los productos */
+  .swiper-slide .Product .Product-txt h4 {
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+  }
+
+  .swiper-slide .Product .Product-txt p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
+
+  .swiper-slide .Product .Product-txt .price {
+    font-size: 16px; /* Tamaño de fuente del precio */
+  }
+
+  
+}
